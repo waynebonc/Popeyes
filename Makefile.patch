@@ -1,0 +1,18 @@
+diff --git a/Makefile b/Makefile
+index 0d770e1..55fc9d4 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,9 +1,6 @@
+-CXXFLAGS := -std=c++14
+-LDFLAGS := -framework CoreFoundation -framework IOKit -lc++
+-
+-OBJS := main.o
++LDFLAGS := -std=c++14 -framework CoreFoundation -framework IOKit -lc++
+ 
+ all: macvdmtool
+ 
+-macvdmtool: $(OBJS)
+-	cc -o $@ $(OBJS) $(LDFLAGS)
++macvdmtool: main.cpp
++	$(CC) -o macvdmtool main.cpp $(LDFLAGS) -target arm64-apple-macos12.0
+\ No newline at end of file
