@@ -1,0 +1,3 @@
+[submodule "macvdmtool_src"]
+	path = macvdmtool_src
+	url = https://github.com/AsahiLinux/macvdmtool
