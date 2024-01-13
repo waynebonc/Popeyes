@@ -19,15 +19,26 @@ class ViewController: NSViewController {
         
         var sysinfo: utsname = utsname()
         let exitCode = uname(&sysinfo)
-        guard exitCode == EXIT_SUCCESS, let machine = String(cString: &sysinfo.machine.0, encoding: .utf8) else {
+        guard exitCode == EXIT_SUCCESS else {
+            exit(1)
+        }
+        let machine = withUnsafePointer(to: &sysinfo.machine) { 
+            $0.withMemoryRebound(to: CChar.self, capacity: 1) { ptr in
+                String(validatingUTF8: ptr)
+            }
+        }
+        guard let machine = machine else {
             exit(1)
         }
         if machine != "arm64" {
-            let alert = NSAlert()
-            alert.alertStyle = .informational
-            alert.messageText = "You can’t open this application because it is not supported on this Mac."
-            alert.runModal()
-            exit(1)
+            DispatchQueue.main.async {
+                let alert = NSAlert()
+                alert.alertStyle = .informational
+                alert.messageText = "You can’t open this application because it is not supported on this Mac."
+                if alert.runModal() == .OK {
+                    exit(1)
+                }
+            }
         }
     }
     
