@@ -35,7 +35,8 @@ class ViewController: NSViewController {
                 let alert = NSAlert()
                 alert.alertStyle = .informational
                 alert.messageText = "You can’t open this application because it is not supported on this Mac."
-                if alert.runModal() == .OK {
+                alert.addButton(withTitle: "Quit")
+                if alert.runModal() == .alertFirstButtonReturn {
                     exit(1)
                 }
             }
