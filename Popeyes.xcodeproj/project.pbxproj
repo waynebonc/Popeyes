@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0131502281A078800F933D1 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B0131501281A078800F933D1 /* STPrivilegedTask.m */; };
+		B08A956E2B627C65005297B5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A956D2B627C65005297B5 /* Enums.swift */; };
 		B093D0D928199E0C0037F54C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093D0D828199E0C0037F54C /* AppDelegate.swift */; };
 		B093D0DB28199E0C0037F54C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093D0DA28199E0C0037F54C /* ViewController.swift */; };
 		B093D0DD28199E0E0037F54C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B093D0DC28199E0E0037F54C /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		B0131500281A078800F933D1 /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
 		B0131501281A078800F933D1 /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		B0131504281A081100F933D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B08A956D2B627C65005297B5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B093D0D528199E0C0037F54C /* Popeyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popeyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B093D0D828199E0C0037F54C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B093D0DA28199E0C0037F54C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				B093D0D828199E0C0037F54C /* AppDelegate.swift */,
 				B093D0DA28199E0C0037F54C /* ViewController.swift */,
+				B08A956D2B627C65005297B5 /* Enums.swift */,
 				B093D0E92819A56C0037F54C /* LICENSES.rtf */,
 				B093D0DC28199E0E0037F54C /* Assets.xcassets */,
 				B093D0DE28199E0E0037F54C /* Main.storyboard */,
@@ -159,6 +162,7 @@
 			files = (
 				B093D0DB28199E0C0037F54C /* ViewController.swift in Sources */,
 				B093D0D928199E0C0037F54C /* AppDelegate.swift in Sources */,
+				B08A956E2B627C65005297B5 /* Enums.swift in Sources */,
 				B0131502281A078800F933D1 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +323,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youssefbasha.Popeyes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -354,7 +358,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youssefbasha.Popeyes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
