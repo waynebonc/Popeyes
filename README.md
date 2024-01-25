@@ -1,6 +1,6 @@
 # Popeyes
 
-A one button DFU tool to put Apple Silicon in DFU mode.
+Apple Silicon utility to quickly DFU and reboot a device.
 
 The host device must be Apple Silicon. Intel devices are not supported.
 
