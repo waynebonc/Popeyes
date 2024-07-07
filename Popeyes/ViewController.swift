@@ -19,33 +19,6 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        var sysinfo: utsname = utsname()
-        let exitCode = uname(&sysinfo)
-        guard exitCode == EXIT_SUCCESS else {
-            exit(1)
-        }
-        let machine = withUnsafePointer(to: &sysinfo.machine) { 
-            $0.withMemoryRebound(to: CChar.self, capacity: 1) { ptr in
-                String(validatingUTF8: ptr)
-            }
-        }
-        guard let machine = machine else {
-            exit(1)
-        }
-#if !DEBUG
-        if machine != "arm64" {
-            DispatchQueue.main.async {
-                let alert = NSAlert()
-                alert.alertStyle = .informational
-                alert.messageText = "You can’t open this application because it is not supported on this Mac."
-                alert.addButton(withTitle: "Quit")
-                if alert.runModal() == .alertFirstButtonReturn {
-                    exit(1)
-                }
-            }
-        }
-#endif
     }
     
     override var representedObject: Any? {
