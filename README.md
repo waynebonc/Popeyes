@@ -2,7 +2,7 @@
 
 Apple Silicon utility to quickly DFU and reboot a device.
 
-The host device must be Apple Silicon. Intel devices are not supported.
+The host device must be Apple Silicon or Intel T2.
 
 ## Compiling
 1. Clone repo with submodule
